@@ -55,7 +55,7 @@ const TextInfoSection = () => {
         <h2 className="text-white md:text-4xl text-3xl font-bold shadow-2xl">
           Hey there!, I'm-
         </h2>
-        <h1 className="text-[44px] md:text-8xl md:mt-2 shadow-2xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
+        <h1 className="text-[40px] md:text-8xl md:mt-2 shadow-2xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
           ABANOUB MESEHA
         </h1>
         <h3 className="md:mt-4 md:text-3xl text-2xl font-bold">
