@@ -2,6 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "../Button/Button";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { SiMinutemailer } from "react-icons/si";
+import { ReactNode } from "react";
+import { FiLinkedin } from "react-icons/fi";
+import { FiFacebook } from "react-icons/fi";
+import { FiGithub } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 const aboutBullets: { icon: string; text: string }[] = [
   {
@@ -17,24 +23,42 @@ const aboutBullets: { icon: string; text: string }[] = [
     text: "I'm always eager to learn more.",
   },
 ];
+const contacts: { icon: ReactNode; link: string }[] = [
+  {
+    link: "www.linkedin.com/in/abanoob-meseha",
+    icon: <FiLinkedin />,
+  },
+  {
+    link: "https://github.com/Abanoob-Meseha",
+    icon: <FiGithub />,
+  },
+  {
+    link: "https://wa.me/201206010738",
+    icon: <FaWhatsapp />,
+  },
+  {
+    link: "https://www.facebook.com/abanoub.meseha.9/",
+    icon: <FiFacebook />,
+  },
+];
 const TextInfoSection = () => {
   return (
-    <div className="relative md:w-[70%] w-[90%]">
+    <div className="relative md:w-[70%] w-[95%]">
       <Image
         src={"/dot.svg"}
         alt="dot image"
         width={160}
         height={160}
-        className="absolute opacity-10 z-0 invert-100"
+        className="absolute opacity-10 z-0 invert-100 md:w-[160px] md:h-[160px] w-[120px] h-[120px]"
       />
-      <div className="absolute z-10 p-4 pl-8">
-        <h2 className="text-white text-4xl font-bold shadow-2xl">
+      <div className="z-10 p-4 pl-8">
+        <h2 className="text-white md:text-4xl text-3xl font-bold shadow-2xl">
           Hey there!, I'm-
         </h2>
-        <h1 className="text-8xl mt-2 shadow-2xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
+        <h1 className="text-[44px] md:text-8xl md:mt-2 shadow-2xl font-extrabold bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
           ABANOUB MESEHA
         </h1>
-        <h3 className="mt-4 text-3xl font-bold">
+        <h3 className="md:mt-4 md:text-3xl text-2xl font-bold">
           Full-Stack Software Engineer and a little bit of{" "}
           <span className="font-serif font-thin bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
             everything
@@ -51,13 +75,27 @@ const TextInfoSection = () => {
           })}
         </div>
         {/* buttons container */}
-        <div className="flex items-center gap-6 mt-10">
+        <div className="flex items-center gap-6 md:mt-10 mt-5">
           <Link href={""}>
-            <Button type="primary">My Work <FaArrowRightLong/></Button>
+            <Button type="primary">
+              My Work <FaArrowRightLong />
+            </Button>
           </Link>
           <Link href={""}>
-            <Button type="secondary">Let's Connect <FaArrowRightLong/></Button>
+            <Button type="secondary">
+              Let's Connect <SiMinutemailer />
+            </Button>
           </Link>
+        </div>
+        {/* contact icons container */}
+        <div className="flex gap-4 md:mt-8 mt-6">
+          {contacts.map((contact, index) => {
+            return (
+              <Link href={contact.link} key={index} target="_blank">
+                <Button type="secondary" circled={true}>{contact.icon}</Button>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </div>

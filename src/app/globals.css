@@ -1,11 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 @import "tailwindcss";
 
-html{
+@theme {
+  --animate-glow: glow 1.5s ease-in-out infinite alternate;
+
+  @keyframes glow {
+    0% {
+      box-shadow: 0 0 10px rgba(79, 70, 229, 0.5);
+    }
+    100% {
+      box-shadow: 0 0 20px rgba(79, 70, 229, 0.9);
+    }
+  }
+}
+html {
   font-family: "Oswald", sans-serif;
   background-color: #151617;
 }
-body{
+body {
   padding: 0;
   margin: 0;
   color: white;
