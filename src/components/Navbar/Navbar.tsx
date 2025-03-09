@@ -13,7 +13,7 @@ import { IoMoonOutline } from "react-icons/io5";
 const Navbar = () => {
   const [isDark, setIsDark] = useState(true);
   return (
-    <div className="sticky top-0 backdrop-blur flex items-center z-50 justify-between py-4 md:px-10 px-2 w-full h-[12vh]">
+    <div className="sticky top-0 backdrop-blur flex items-center z-50 justify-between py-4 md:px-10 px-2 w-full h-[10vh]">
       {/* nav logo */}
       <Image
         src={"/logo_blue.png"}

@@ -60,14 +60,14 @@ const TextInfoSection = () => {
         </h1>
         <h3 className="md:mt-4 md:text-3xl text-2xl font-bold">
           Full-Stack Software Engineer and a little bit of{" "}
-          <span className="font-serif font-thin bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
+          <span style={{fontFamily: "Playwrite IT Moderna"}} className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
             everything
           </span>
         </h3>
-        <div className="mt-4 flex flex-col gap-1 w-[110%] relative -left-8 md:text-start md:left-0">
+        <div className="md:mt-4 mt-2 flex flex-col md:gap-1 w-[110%] relative -left-8 md:text-start md:left-0">
           {aboutBullets.map((bullet, index) => {
             return (
-              <div className="flex gap-2 text-xl text-gray-200" key={index}>
+              <div className="flex gap-2 md:text-xl text-lg text-gray-200" key={index}>
                 <span className="shadow-2xl">{bullet.icon}</span>
                 <p>{bullet.text}</p>
               </div>
