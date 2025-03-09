@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="pt-[15vh]">
+    <div className="">
       <Hero />
       <ProjectsSection />
     </div>
