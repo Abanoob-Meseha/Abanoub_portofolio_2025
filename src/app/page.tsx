@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero/Hero";
 import ProjectsSection from "@/components/ProjectsSection/ProjectsSection";
+import TechStackSection from "@/components/TechStackSection/TechStackSection";
 import Image from "next/image";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div className="">
       <Hero />
       <ProjectsSection />
+      <TechStackSection />
     </div>
   );
 }
