@@ -1,4 +1,6 @@
+import ContactSection from "@/components/ContactSection/ContactSection";
 import ExperienceSection from "@/components/ExperienceSection/ExperienceSection";
+import Footer from "@/components/Footer/Footer";
 import Hero from "@/components/Hero/Hero";
 import ProjectsSection from "@/components/ProjectsSection/ProjectsSection";
 import TechStackSection from "@/components/TechStackSection/TechStackSection";
@@ -11,6 +13,8 @@ export default function Home() {
       <ProjectsSection />
       <TechStackSection />
       <ExperienceSection />
+      <ContactSection />
+      <Footer />
     </div>
   );
 }
