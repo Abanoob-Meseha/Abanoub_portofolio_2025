@@ -4,7 +4,7 @@ import WorkExperienceCard from "../WorkExperienceCard/WorkExperienceCard";
 
 const ExperienceSection = () => {
   return (
-    <div className="mt-10">
+    <div className="mt-10" id="experience">
       <SectionTitle>Work Experience</SectionTitle>
       {/* timeline */}
       <div className="relative w-[90%] mx-auto my-10">

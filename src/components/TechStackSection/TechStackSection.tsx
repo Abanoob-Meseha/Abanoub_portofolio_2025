@@ -18,7 +18,7 @@ const TechStackSection = () => {
     });
   }, []);
   return (
-    <div className="p-4 mb-20">
+    <div className="p-4 mb-20 " id="tools">
       <div className="relative w-[400] h-[300] mx-auto flex items-center flex-col overflow-clip">
         <Image
           src={"/gpt.webp"}

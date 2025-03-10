@@ -4,7 +4,7 @@ import projects from "../../../public/data/projects";
 
 const ProjectsSection = () => {
   return (
-    <div className="p-4 mb-10">
+    <div className="p-4 mb-10" id="projects">
       <SectionTitle>Featured Projects</SectionTitle>
       <div className="md:px-4 px-2 grid md:grid-cols-3 grid-cols-1 gap-8 mt-8 overflow-hidden">
         {projects.map((project, index) => {

@@ -13,7 +13,7 @@ import { IoMoonOutline } from "react-icons/io5";
 const Navbar = () => {
   const [isDark, setIsDark] = useState(true);
   return (
-    <div className="sticky top-0 backdrop-blur flex items-center z-50 justify-between py-4 md:px-10 px-2 w-full h-[10vh]">
+    <div className="sticky top-0 backdrop-blur flex items-center z-50 justify-between py-4 md:px-10 px-2 w-full h-[12vh]">
       {/* nav logo */}
       <Image
         src={"/logo_blue.png"}
@@ -44,21 +44,21 @@ const CenterNav = () => {
     },
     {
       icon: <FaRegFolder className={navLinkStyle} size={40} title="Projects" />,
-      link: "/",
+      link: "/#projects",
+    },
+    {
+      icon: <FiTool className={navLinkStyle} size={40} title="Tools" />,
+      link: "/#tools",
     },
     {
       icon: (
         <PiToolboxThin className={navLinkStyle} size={40} title="Experience" />
       ),
-      link: "/",
-    },
-    {
-      icon: <FiTool className={navLinkStyle} size={40} title="Tools" />,
-      link: "/",
+      link: "/#experience",
     },
     {
       icon: <CiMail className={navLinkStyle} size={40} title="Contact" />,
-      link: "/",
+      link: "/#contact",
     },
   ];
   return (
