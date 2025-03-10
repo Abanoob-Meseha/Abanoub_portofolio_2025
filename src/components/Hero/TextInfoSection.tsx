@@ -25,7 +25,7 @@ const aboutBullets: { icon: string; text: string }[] = [
 ];
 const contacts: { icon: ReactNode; link: string }[] = [
   {
-    link: "www.linkedin.com/in/abanoob-meseha",
+    link: "https://linkedin.com/in/abanoob-meseha",
     icon: <FiLinkedin />,
   },
   {
