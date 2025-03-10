@@ -1,12 +1,25 @@
+"use client";
 import { Project } from "@/types";
 import Image from "next/image";
 import Button from "../Button/Button";
 import { FiGithub } from "react-icons/fi";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 
 const ProjectCard = ({ project }: { project: Project }) => {
+  useEffect(() => {
+    AOS.init({
+      offset: 100,
+      duration: 400,
+      easing: "ease-in-sine",
+      delay: 50,
+      once: true
+    });
+  }, []);
   return (
-    <div className="">
+    <div data-aos="fade-up">
       {/* image Section */}
       <div
         style={{ backgroundColor: project.themeColor }}
@@ -32,18 +45,26 @@ const ProjectCard = ({ project }: { project: Project }) => {
         <p className="text-sm text-gray-300">{project.description}</p>
         {/* techs */}
         <div className="flex flex-wrap gap-1 mt-4">
-            {
-                project.techs.map((tech ,index)=>{
-                    return(
-                        <p className="rounded-md shadow-2xl py-1 px-2 text-xs " style={{backgroundColor:project.themeColor}} key={index}>{tech}</p>
-                    )
-                })
-            }
+          {project.techs.map((tech, index) => {
+            return (
+              <p
+                className="rounded-md shadow-2xl py-1 px-2 text-xs "
+                style={{ backgroundColor: project.themeColor }}
+                key={index}
+              >
+                {tech}
+              </p>
+            );
+          })}
         </div>
         {/* Links section */}
         <div className="flex items-center gap-4 mt-6">
-            <Button type="primary" ><FaArrowUpRightFromSquare/> Live Demo</Button>
-            <Button type="secondary" ><FiGithub/> Source Code</Button>
+          <Button type="primary">
+            <FaArrowUpRightFromSquare /> Live Demo
+          </Button>
+          <Button type="secondary">
+            <FiGithub /> Source Code
+          </Button>
         </div>
       </div>
     </div>

@@ -7,3 +7,11 @@ export type Project = {
   githubLink: string;
   themeColor: string ;
 };
+
+export type WorkExperience = {
+  title : string ;
+  date : string ;
+  location: string ;
+  company: string ;
+  workBenifits : string [] ;
+}

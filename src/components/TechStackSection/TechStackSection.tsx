@@ -10,14 +10,15 @@ import "aos/dist/aos.css"; // Import AOS styles
 const TechStackSection = () => {
   useEffect(() => {
     AOS.init({
-      offset: 100,
+      offset: 10,
       duration: 1000,
       easing: "ease-in-sine",
       delay: 100,
+      once: true
     });
   }, []);
   return (
-    <div className="p-4">
+    <div className="p-4 mb-20">
       <div className="relative w-[400] h-[300] mx-auto flex items-center flex-col overflow-clip">
         <Image
           src={"/gpt.webp"}
@@ -37,7 +38,7 @@ const TechStackSection = () => {
       <div className="mt-4 flex md:w-[70%] w-full mx-auto items-center justify-center gap-2 flex-wrap">
         {stackTechs.map((tech, index) => {
           return (
-            <div key={index} data-aos="fade-left">
+            <div key={index} data-aos="fade-up">
               <Button type="secondary" >
                 <Image
                   src={`https://cdn.simpleicons.org/${tech.toLowerCase()}?viewbox=auto`}
