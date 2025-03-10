@@ -35,38 +35,45 @@ const Navbar = () => {
 export default Navbar;
 
 const CenterNav = () => {
-  const navLinkStyle: string =
-    "text-white p-2 rounded-md hover:bg-indigo-900 cursor-pointer transition-all duration-300 ease-initial";
-  const navLinks: { icon: ReactNode; link: string }[] = [
+  const navLinks: { icon: ReactNode; link: string , title :string }[] = [
     {
-      icon: <AiOutlineHome className={navLinkStyle} size={40} title="Home" />,
+      title: "HOME",
+      icon: <AiOutlineHome />,
       link: "/",
     },
     {
-      icon: <FaRegFolder className={navLinkStyle} size={40} title="Projects" />,
+      title: "PROJECTS",
+      icon: <FaRegFolder />,
       link: "/#projects",
     },
     {
-      icon: <FiTool className={navLinkStyle} size={40} title="Tools" />,
+      title: "TOOLS",
+      icon: <FiTool />,
       link: "/#tools",
     },
     {
+      title: "EXPERIRNCE",
       icon: (
-        <PiToolboxThin className={navLinkStyle} size={40} title="Experience" />
+        <PiToolboxThin/>
       ),
       link: "/#experience",
     },
     {
-      icon: <CiMail className={navLinkStyle} size={40} title="Contact" />,
+      title: "CONTACT",
+      icon: <CiMail />,
       link: "/#contact",
     },
   ];
+  const navLinkStyle: string =
+  "text-2xl text-white p-2 rounded-md hover:bg-indigo-900 cursor-pointer transition-all duration-300 ease-initial";
+  const activeStyle : string = "bg-indigo-900"
+  const [active , setActive] = useState('HOME')
   return (
     <div className="bg-gray-950 rounded-xl py-2 md:px-4 px-2 md:w-[30%] w-[65%] shadow-2xl flex items-center justify-between">
       {navLinks.map((navLink, index) => {
         const {icon , link} = navLink ;
         return (
-          <Link href={link} key={index}>
+          <Link href={link} key={index} onClick={()=>setActive(navLink.title)} className={`${active == navLink.title ? `${activeStyle} ${navLinkStyle}` :navLinkStyle}`}>
             {icon}
           </Link>
         );
