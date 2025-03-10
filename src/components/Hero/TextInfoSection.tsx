@@ -76,12 +76,12 @@ const TextInfoSection = () => {
         </div>
         {/* buttons container */}
         <div className="flex items-center gap-6 md:mt-10 mt-5">
-          <Link href={""}>
+          <Link href={"/#projects"}>
             <Button type="primary">
               My Work <FaArrowRightLong />
             </Button>
           </Link>
-          <Link href={""}>
+          <Link href={"/#contact"}>
             <Button type="secondary">
               Let's Connect <SiMinutemailer />
             </Button>
