@@ -7,6 +7,7 @@ import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
+import Link from "next/link";
 
 const ProjectCard = ({ project }: { project: Project }) => {
   useEffect(() => {
@@ -15,7 +16,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
       duration: 400,
       easing: "ease-in-sine",
       delay: 50,
-      once: true
+      once: true,
     });
   }, []);
   return (
@@ -59,12 +60,16 @@ const ProjectCard = ({ project }: { project: Project }) => {
         </div>
         {/* Links section */}
         <div className="flex items-center gap-4 mt-6">
-          <Button type="primary">
-            <FaArrowUpRightFromSquare /> Live Demo
-          </Button>
-          <Button type="secondary">
-            <FiGithub /> Source Code
-          </Button>
+          <Link href={project.demoLink} target="_blank">
+            <Button type="primary">
+              <FaArrowUpRightFromSquare /> Live Demo
+            </Button>
+          </Link>
+          <Link href={project.githubLink} target="_blank">
+            <Button type="secondary">
+              <FiGithub /> Source Code
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
