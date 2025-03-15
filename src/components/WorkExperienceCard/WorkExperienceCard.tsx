@@ -30,7 +30,7 @@ const WorkExperienceCard = ({ experience }: { experience: WorkExperience }) => {
           <FaRegCalendarAlt /> {experience.date}
         </h1>
         {/* card */}
-        <div className="bg-indigo-900 rounded-lg rounded-tl-none p-4 mt-2 ">
+        <div className="bg-indigo-900 rounded-lg rounded-tl-none p-4 mt-2 text-white">
           <h1 className="text-2xl shadow-2xl w-fit">{experience.title}</h1>
           <div className="flex md:gap-4 gap-2 items-center mt-2 text-indigo-950 flex-wrap w-fit">
             <p className="flex items-center gap-2 rounded-md bg-amber-50 md:px-2  px-3 py-1">

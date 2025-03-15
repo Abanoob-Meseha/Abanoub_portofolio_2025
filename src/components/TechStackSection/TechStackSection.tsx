@@ -25,7 +25,7 @@ const TechStackSection = () => {
           alt="Rotating image"
           width={400}
           height={400}
-          className="absolute z-0 shadow-2xl opacity-65 animate-rotate"
+          className="absolute z-0  opacity-65 animate-rotate"
         />
         <div className="absolute z-10 w-full backdrop-blur-xs flex items-center flex-col bottom-0 px-2 pt-2">
           <p className="uppercase opacity-80 shadow-2xl">

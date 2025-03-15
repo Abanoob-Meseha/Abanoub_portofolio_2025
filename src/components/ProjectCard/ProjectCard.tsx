@@ -43,9 +43,9 @@ const ProjectCard = ({ project }: { project: Project }) => {
             style={{ backgroundColor: project.themeColor }}
           ></div>
         </h1>
-        <p className="text-sm text-gray-300">{project.description}</p>
+        <p className="text-sm dark:text-gray-300">{project.description}</p>
         {/* techs */}
-        <div className="flex flex-wrap gap-1 mt-4">
+        <div className="flex flex-wrap gap-1 mt-4 text-white">
           {project.techs.map((tech, index) => {
             return (
               <p
