@@ -16,7 +16,7 @@ const WorkExperiences: WorkExperience[] = [
   },
   {
     title: "Full-Stack Web Developer",
-    date: "Jan 2023 - Mar 2025",
+    date: "Jan 2024 - Mar 2025",
     location: "Remote",
     company: "Freelance",
     workBenifits: [
