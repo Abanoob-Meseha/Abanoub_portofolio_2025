@@ -42,7 +42,7 @@ const WorkExperienceCard = ({ experience }: { experience: WorkExperience }) => {
           </div>
           <ul className="list-disc mt-4 pl-4 md:w-[90%]">
             {experience.workBenifits.map((benefit, index) => {
-              return <li key={index}>{benefit}</li>;
+              return <li key={index} className="opacity-80">{benefit}</li>;
             })}
           </ul>
         </div>

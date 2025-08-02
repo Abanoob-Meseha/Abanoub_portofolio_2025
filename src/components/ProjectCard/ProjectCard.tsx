@@ -31,7 +31,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           alt={project.name}
           width={900}
           height={450}
-          className="relative -bottom-10 rounded-lg shadow-2xl transition duration-300 ease-in-out hover:-rotate-6 w-[90%] h-[100%]"
+          className="relative object-center -bottom-10 rounded-lg shadow-2xl transition duration-300 ease-in-out hover:-rotate-6 w-[90%] h-[100%]"
         />
       </div>
       {/* description Section */}

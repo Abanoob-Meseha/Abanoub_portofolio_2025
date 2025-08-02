@@ -19,15 +19,15 @@ const TechStackSection = () => {
   }, []);
   return (
     <div className="p-4 mb-20 " id="tools">
-      <div className="relative w-[400] h-[300] mx-auto flex items-center flex-col overflow-clip">
+      <div className="relative md:w-[400] md:h-[300] w-[300px] h-[300px] mx-auto flex items-center flex-col overflow-clip">
         <Image
           src={"/gpt.webp"}
           alt="Rotating image"
           width={400}
           height={400}
-          className="absolute z-0  opacity-65 animate-rotate"
+          className="absolute z-0 md:w-[400px] md:h-[400px] w-[300px] h-[300px] opacity-65 animate-rotate"
         />
-        <div className="absolute z-10 w-full backdrop-blur-xs flex items-center flex-col bottom-0 px-2 pt-2">
+        <div className="absolute z-10 w-full backdrop-blur-xs flex items-center flex-col md:bottom-0 bottom-7 px-2 pt-2">
           <p className="uppercase opacity-80 shadow-2xl">
             I constantly try to improve
           </p>

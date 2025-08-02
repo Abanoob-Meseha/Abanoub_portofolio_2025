@@ -2,6 +2,26 @@ import { Project } from "@/types";
 
 const projects: Project[] = [
   {
+    img: "/projects_imgs/john_lewis.png",
+    name: "E-Commerce Product Details Page",
+    description: "A clean, responsive product detail page built with Next.js, TanStack React Query, Zustand, Tailwind CSS & shadcn/ui.",
+    techs: [
+      "Next.js",
+      "Typescript",
+      "Tailwind CSS",
+      "APP Router",
+      "Lucid Icons",
+      "Shadecn",
+      "React Query",
+      "Zustand",
+      "Axios",
+      "Vercel",
+    ],
+    demoLink: "https://e-commerce-product-detail-page-abanoobmesehas-projects.vercel.app",
+    githubLink: "https://github.com/Abanoob-Meseha/E-commerce-Product-Detail-Page",
+    themeColor: "#3E3F29",
+  },
+  {
     img: "/projects_imgs/portofolio_project.png",
     name: "Potofolio",
     description: "Designed with a sleek and modern UI, it highlights my expertise in frontend and backend development, providing a smooth and interactive user experience.",

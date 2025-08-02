@@ -2,8 +2,21 @@ import { WorkExperience } from "@/types";
 
 const WorkExperiences: WorkExperience[] = [
   {
+    title: "Front-End Developer",
+    date: "Apr 2025 - Present",
+    location: "Cairo",
+    company: "APEX For IT Solutions",
+    workBenifits: [
+      "Built and maintained dashboards and large-scale e-commerce platforms using modern frameworks like Next.js.",
+      "Developed dynamic, pixel-perfect websites with a strong focus on responsive UI and UX.",
+      "Integrated RESTful and third-party APIs securely and efficiently across multiple projects.",
+      "Optimized websites for performance and SEO, improving load times and search visibility.",
+      "Applied best practices in web security and accessibility for production-ready applications.",
+    ],
+  },
+  {
     title: "Full-Stack Web Developer",
-    date: "Jan 2023 - Present",
+    date: "Jan 2023 - Mar 2025",
     location: "Remote",
     company: "Freelance",
     workBenifits: [
@@ -37,4 +50,4 @@ const WorkExperiences: WorkExperience[] = [
   },
 ];
 
-export default WorkExperiences ;
+export default WorkExperiences;
