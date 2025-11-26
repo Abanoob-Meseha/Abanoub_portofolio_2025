@@ -2,6 +2,32 @@ import { Project } from "@/types";
 
 const projects: Project[] = [
   {
+    img: "/projects_imgs/manpower.png",
+    name: "manpower-eg.com",
+    description: "Full Stack Web App Portfolio for Manpower Security Company in Egypt that Provides Security and Recruitment Services",
+    techs: [
+      "Next.js",
+      "Next.js Server API",
+      "Typescript",
+      "Tailwind CSS",
+      "APP Router",
+      "Lucid Icons",
+      "Shadecn",
+      "React Query",
+      "Resend API",
+      "Axios",
+      "Hostinger",
+      "VPS Server",
+      "PM2",
+      "Node.js",
+      "Nginx",
+      "N8N",
+    ],
+    demoLink: "https://manpower-eg.com",
+    githubLink: "https://github.com/Abanoob-Meseha/manpower-nextjs",
+    themeColor: "#377208",
+  },
+  {
     img: "/projects_imgs/john_lewis.png",
     name: "E-Commerce Product Details Page",
     description: "A clean, responsive product detail page built with Next.js, TanStack React Query, Zustand, Tailwind CSS & shadcn/ui.",
@@ -178,7 +204,7 @@ const projects: Project[] = [
     themeColor: "#54473F",
   },
   {
-    img:"/projects_imgs/bracelet_project.png",
+    img: "/projects_imgs/bracelet_project.png",
     name: "Medical Bracelets Landing",
     description: "A smoothy and responsive product landing page for Medical Bracelets using HTML,CSS,JS.",
     techs: [
