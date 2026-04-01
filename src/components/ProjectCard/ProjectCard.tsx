@@ -2,7 +2,7 @@
 import { Project } from "@/types";
 import Image from "next/image";
 import Button from "../Button/Button";
-import { FiGithub } from "react-icons/fi";
+import { FiGithub, FiLock, FiSlash } from "react-icons/fi";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import { useEffect } from "react";
 import AOS from "aos";
@@ -60,14 +60,24 @@ const ProjectCard = ({ project }: { project: Project }) => {
         </div>
         {/* Links section */}
         <div className="flex items-center gap-4 mt-6">
-          <Link href={project.demoLink} target="_blank">
-            <Button type="primary">
-              <FaArrowUpRightFromSquare /> Live Demo
+          <Link
+            href={project.no_live_demo ? "#" : project.demoLink}
+            target={project.no_live_demo ? "_self" : "_blank"}
+            onClick={(e) => project.no_live_demo && e.preventDefault()}
+          >
+            <Button type="primary" disabled={project.no_live_demo}>
+              {project.no_live_demo ? <FiSlash /> : <FaArrowUpRightFromSquare />}
+              {project.no_live_demo ? "No Live Demo" : "Live Demo"}
             </Button>
           </Link>
-          <Link href={project.githubLink} target="_blank">
-            <Button type="secondary">
-              <FiGithub /> Source Code
+          <Link
+            href={project.is_private ? "#" : project.githubLink}
+            target={project.is_private ? "_self" : "_blank"}
+            onClick={(e) => project.is_private && e.preventDefault()}
+          >
+            <Button type="secondary" disabled={project.is_private}>
+              {project.is_private ? <FiLock /> : <FiGithub />}
+              {project.is_private ? "Private" : "Source Code"}
             </Button>
           </Link>
         </div>

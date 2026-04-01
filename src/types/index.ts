@@ -6,6 +6,8 @@ export type Project = {
   demoLink: string;
   githubLink: string;
   themeColor: string ;
+  is_private?: boolean;
+  no_live_demo?: boolean;
 };
 
 export type WorkExperience = {
